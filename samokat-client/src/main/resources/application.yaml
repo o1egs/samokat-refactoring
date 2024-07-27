@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/samokat_db
+    username: postgres
+    password: postgres
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+      show_sql: true
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+    mongodb:
+      username: root
+      password: root
+      database: samokat_user
+      authentication-database: admin
+      port: 27017
+      host: localhost
+server:
+  port: 8080
